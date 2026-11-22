@@ -27,11 +27,21 @@ ALIAS=ninetailsflip
 KEYSTORE="$KEY_DIR/release.jks"
 PROPS="$KEY_DIR/release.properties"
 
-KEYTOOL="$(command -v keytool || true)"
-if [ -z "$KEYTOOL" ]; then
-    KEYTOOL="$(ls /opt/homebrew/opt/openjdk*/bin/keytool /usr/local/opt/openjdk*/bin/keytool 2>/dev/null | head -1 || true)"
-fi
-[ -n "$KEYTOOL" ] || { echo "keytool not found: install a JDK (brew install openjdk@21)" >&2; exit 1; }
+# The first keytool that actually runs: macOS's /usr/bin/keytool is only a stub that fails
+# without a system-wide Java, so a JDK's own comes first.
+KEYTOOL=""
+for candidate in \
+    ${JAVA_HOME:+"$JAVA_HOME/bin/keytool"} \
+    /opt/homebrew/opt/openjdk*/bin/keytool \
+    /usr/local/opt/openjdk*/bin/keytool \
+    /Library/Java/JavaVirtualMachines/*/Contents/Home/bin/keytool \
+    "$(command -v keytool || true)"; do
+    if [ -x "$candidate" ] && "$candidate" -help >/dev/null 2>&1; then
+        KEYTOOL="$candidate"
+        break
+    fi
+done
+[ -n "$KEYTOOL" ] || { echo "No working keytool: install a JDK (brew install openjdk@21)" >&2; exit 1; }
 command -v gh >/dev/null || { echo "gh not found: brew install gh" >&2; exit 1; }
 gh auth status >/dev/null 2>&1 || { echo "Log in first: gh auth login" >&2; exit 1; }
 
