@@ -24,8 +24,12 @@ the organization unless a repository says otherwise.
 
 - Kotlin, Android 14+ (minSdk 34), with no AndroidX and no coroutines, like the Nine suite. If
   you need a new dependency, say why in the PR.
-- `nine-core/core` is the Nine suite's module and stays **byte-for-byte unchanged**, so new
-  versions can be copied over it. Shared code of our own goes in `nine-core/kit`.
+- `nine-core/core` and `nine-core/contacts` are the Nine suite's modules and stay
+  **byte-for-byte unchanged**, so new versions can be copied over them. Shared code of our own
+  goes in `nine-core/kit`.
+- In the forks (L9, C9, P9, M9), keep our changes small and on top of upstream, and take
+  upstream's changes with `scripts/sync-upstream.sh`. Anything that would help the official
+  apps too is worth offering upstream: <https://git.sr.ht/~timofurrer/nine>.
 - Lint warnings fail the build. Keep it that way.
 - Put logic that doesn't need Android in pure functions and unit-test it
   (`./gradlew testDebugUnitTest`).

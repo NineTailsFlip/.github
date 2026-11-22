@@ -13,6 +13,10 @@ body:
       options:
         - TG9 (Telegram)
         - G9 (Gallery)
+        - L9 (Launcher)
+        - C9 (Calendars and Contacts)
+        - P9 (Phone)
+        - M9 (Messages)
         - Other
     validations:
       required: true
