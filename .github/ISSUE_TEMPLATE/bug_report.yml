@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in one of our apps doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Keypads differ a lot between phones, so the phone details below matter more than usual.
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      options:
+        - TG9 (Telegram)
+        - G9 (Gallery)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Settings → About.
+      placeholder: "0.1.2"
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model and Android version
+      placeholder: "e.g. <brand> <model>, Android 14"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did
+      description: The screen you were on and the keys you pressed, in order.
+      placeholder: |
+        1. Opened a chat
+        2. Pressed * then 3
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: "`adb logcat` output around the problem, if you have it. Remove phone numbers and names first."
+      render: text

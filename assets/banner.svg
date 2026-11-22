@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360">
+  <title>NineTailsFlip — everyday apps for phones with a D-pad and a keypad</title>
+  <rect width="1280" height="360" fill="#000000"/>
+  <rect x="82.5" y="64.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="158.5" y="64.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="234.5" y="64.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="82.5" y="140.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="158.5" y="140.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="234.5" y="140.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="82.5" y="216.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="158.5" y="216.5" width="55" height="55" rx="13" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <rect x="232" y="214" width="60" height="60" rx="13" fill="#FFFFFF"/>
+  <text x="262.0" y="244.0" dy="0.36em" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="700" font-size="44" fill="#000000">9</text>
+  <text x="372" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="64" font-weight="700" fill="#FFFFFF">NineTailsFlip</text>
+  <text x="372" y="192" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" fill="#8A8A8A">Everyday apps for phones with a D-pad and a keypad.</text>
+  <text x="372" y="232" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" fill="#8A8A8A">No touchscreen needed.</text>
+  <rect x="0" y="302" width="1280" height="2" fill="#262626"/>
+  <text x="80" y="338" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" fill="#4D4D4D">ok open · ↑↓ move · * menu · ‹ back</text>
+</svg>

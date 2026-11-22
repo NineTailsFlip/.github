@@ -1,0 +1,29 @@
+name: Adapt an app for keys
+description: An everyday app you'd like on a D-pad phone.
+title: "[App request] "
+labels: ["app request"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: Which app?
+      placeholder: "e.g. a podcast player, maps, a notes app"
+    validations:
+      required: true
+  - type: textarea
+    id: daily
+    attributes:
+      label: What do you use it for every day?
+      description: The few things that must work. We'd rather do three things well on keys than everything badly.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What goes wrong today on your keypad phone?
+      description: For example, a screen you can't reach without touch, or something that's too slow or too small.
+  - type: input
+    id: phone
+    attributes:
+      label: Your phone
+      placeholder: "<brand> <model>, Android 14"
