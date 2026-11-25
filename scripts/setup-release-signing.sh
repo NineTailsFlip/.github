@@ -20,7 +20,7 @@
 set -euo pipefail
 
 ORG=NineTailsFlip
-REPOS=(tg9 g9 l9 c9 p9 m9 setup9 k9 settings9)
+REPOS=(tg9 g9 l9 c9 p9 m9 setup9 k9 settings9 lock9)
 KEY_DIR="${1:-$HOME/NineTailsFlip-signing}"
 TG9_PROPERTIES="${2:-$HOME/Documents/GitHub/tg9/local.properties}"
 ALIAS=ninetailsflip

@@ -17,7 +17,7 @@ on:
   workflow_call:
     inputs:
       app:
-        description: "The app's short name (tg9, g9, l9, c9, p9, m9, setup9, settings9): APK names and update.json use it."
+        description: "The app's short name (tg9, g9, l9, c9, p9, m9, setup9, settings9, lock9): APK names and update.json use it."
         required: true
         type: string
       tdlib:
