@@ -8,26 +8,44 @@ each one rebuilt so that every action is a key press away.
 
 ## Apps
 
-| | App | What it is | Status |
+| | App | What it is | Release |
 |---|---|---|---|
-| 💬 | **[TG9](https://github.com/NineTailsFlip/tg9)** | Telegram on 9 keys, an unofficial client built on [TDLib](https://github.com/tdlib/td). Chats, voice messages, photos and videos, notifications without Google push. | early, 0.1 |
-| 🖼 | **[G9](https://github.com/NineTailsFlip/g9)** | Gallery on 9 keys: photos and videos by day and by folder, zoom, video playback, share, trash. | new, 0.1 |
-| 🧩 | **[nine-core](https://github.com/NineTailsFlip/nine-core)** | The shared code: the Nine suite's `core` and `contacts` modules, plus our MediaStore gallery kit. | library |
+| 💬 | **[TG9](https://github.com/NineTailsFlip/tg9)** | Telegram on 9 keys, an unofficial client built on [TDLib](https://github.com/tdlib/td): chats, voice messages, photos and videos, notifications without Google push | [0.1.3](https://github.com/NineTailsFlip/tg9/releases/latest) |
+| 🖼 | **[G9](https://github.com/NineTailsFlip/g9)** | Gallery: photos and videos by day and by folder, zoom, video playback, share, trash | [0.1.1](https://github.com/NineTailsFlip/g9/releases/latest) |
+| ⌨️ | **[K9](https://github.com/NineTailsFlip/k9)** | Keyboard: T9 in 50+ languages, a fork of [Traditional T9](https://github.com/sspanak/tt9) with its settings in the Nine look | [66.0](https://github.com/NineTailsFlip/k9/releases/latest) |
 
 ### The Nine suite, forked
 
-Our forks of Timo Furrer's [Nine](https://nine.furrer.life) apps. Each one keeps upstream's full
-history and can merge upstream changes with one script.
+Our forks of Timo Furrer's [Nine](https://nine.furrer.life) apps. Each keeps upstream's full
+history, merges upstream with one script, and updates itself from our releases.
+
+| | App | What it is | Release |
+|---|---|---|---|
+| 🏠 | **[L9](https://github.com/NineTailsFlip/l9)** | Launcher: the number keys launch your apps; recent apps | [0.11.0](https://github.com/NineTailsFlip/l9/releases/latest) |
+| 📅 | **[C9](https://github.com/NineTailsFlip/c9)** | Calendars and contacts | [0.6.2](https://github.com/NineTailsFlip/c9/releases/latest) |
+| 📞 | **[P9](https://github.com/NineTailsFlip/p9)** | Phone: the dialer and calls | [0.3.4](https://github.com/NineTailsFlip/p9/releases/latest) |
+| ✉️ | **[M9](https://github.com/NineTailsFlip/m9)** | Messages: SMS conversations | [0.2.4](https://github.com/NineTailsFlip/m9/releases/latest) |
+
+### Our LineageOS
+
+A LineageOS 23.2 (Android 16) build for the ALT AT-M140 keypad flip phone
+([android_vendor_thor2](https://github.com/kloploid/android_vendor_thor2)), with all the apps
+above built in and the system's own screens redone in the same style:
 
 | | App | What it is |
 |---|---|---|
-| 🏠 | **[L9](https://github.com/NineTailsFlip/l9)** | Launcher: the number keys launch your apps. |
-| 📅 | **[C9](https://github.com/NineTailsFlip/c9)** | Calendars and contacts. |
-| 📞 | **[P9](https://github.com/NineTailsFlip/p9)** | Phone: the dialer and calls. |
-| ✉️ | **[M9](https://github.com/NineTailsFlip/m9)** | Messages: SMS conversations. |
+| 👋 | **[Setup](https://github.com/NineTailsFlip/setup9)** | The first-time setup: language, Wi-Fi, keyboard layouts, date and time, PIN, the look of every app |
+| ⚙️ | **[Settings](https://github.com/NineTailsFlip/settings9)** | The phone's settings |
+| 🔒 | **[Lock](https://github.com/NineTailsFlip/lock9)** | The lock screen |
 
-There are no release APKs of our own yet. Each repository explains how to build it. The official
-Nine builds are on [Nine's F-Droid repository](https://nine.furrer.life).
+### Shared code
+
+| | Repository | What it is |
+|---|---|---|
+| 🧩 | **[nine-core](https://github.com/NineTailsFlip/nine-core)** | The Nine suite's `core` and `contacts` modules, our gallery kit, and updates from GitHub Releases |
+
+Install an app by downloading its APK from Releases; after that it offers its own updates. The
+official Nine builds are on [Nine's F-Droid repository](https://nine.furrer.life).
 
 ## How our apps feel
 
@@ -49,6 +67,9 @@ touchscreen and without Google services.
 
 - **[Nine](https://git.sr.ht/~timofurrer/nine)** by Timo Furrer (L9, C9, P9, M9): the keypad UI
   our apps share and the apps we fork, used under GPL-3.0. Our apps are GPL-3.0-or-later too.
+- **[Traditional T9](https://github.com/sspanak/tt9)** by sspanak and contributors, which K9 is
+  built on (Apache-2.0).
+- **[LineageOS](https://lineageos.org)**, which our phone build is based on.
 - **[TDLib](https://github.com/tdlib/td)**, Telegram's own client library. TG9 is not made by
   Telegram and is not affiliated with it.
 
