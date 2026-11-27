@@ -71,6 +71,16 @@ jobs:
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "ndk;27.2.12479018" > /dev/null
           ANDROID_SDK_ROOT="$ANDROID_HOME" scripts/build-tdlib.sh
 
+      # Robolectric downloads its Android jars (android-all-instrumented, ~100 MB each) from Maven
+      # Central into ~/.m2 when a test first needs one, and a dropped connection there failed the
+      # tests rather than the network. Kept between runs, so normally nothing is downloaded.
+      - name: Robolectric's Android jars
+        uses: actions/cache@v4
+        with:
+          key: robolectric-${{ runner.os }}-${{ hashFiles('**/*.gradle.kts') }}
+          restore-keys: robolectric-${{ runner.os }}-
+          path: ~/.m2/repository/org/robolectric
+
       - name: Tests and lint
         run: ./gradlew --no-daemon :app:testDebugUnitTest :app:lintDebug
 
